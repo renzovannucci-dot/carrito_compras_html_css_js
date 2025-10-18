@@ -1,0 +1,319 @@
+/*custome properties*/
+
+:root{
+    --primario: #de1de8;
+    --secundario: #3358FF;
+    --blanco: #ffffff;
+    --negro: #000000;
+
+    --fuentePrincipal: 'Poppins', sans-serif;
+}
+
+/*RESET: REMS y Box Sizing*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*1rem = 10px*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem; /*quiero que las letras de todos los parrafos midan 1.6rem*//*le tengo que poner 1.6rem al tamaño de fuente de todo el body para que la base sean 16px como si fuera el valor por defecto*/
+    line-height: 1.5; /*interlineado de los parrafos*/
+}
+
+/*GLOBALES*/
+
+.contenedor {
+    max-width: 120rem; /*El ancho va a hasta 1200px puede ser menos, no mas*/
+    width: 90%; /*Va a tomar el 90% del tamaño del contenedor, en este caso el90% del contenedor, hasta los 1200px*/
+    margin: 0 auto; /*Para centrar horizontalmente*/
+}
+
+h1, h2{
+    font-weight: 900;
+    font-family: var(--fuentePincipal);
+    margin: 2.5rem; 
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    display: block; /*para evitar la separacion en el borde inferior*/
+    height: auto; /*para que las imagenes no pierdan proporcion en dospositivos pequeños(que la imagen se estire en pqueños dispositivos), le agrega la misma altura segun el ancho del contenedor*/
+}
+
+/*UTILIDADES*/
+ 
+.text-center { /*centra el contenido dentro del div de forma horixzontal*/
+    text-align: center;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+/*Header*/
+
+span {
+    color: var(--primario);
+}
+.header__flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+@media (min-width: 768px) { 
+    .header__flex {
+        
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+.header__submenu{
+    position: relative
+}
+
+.header__submenu .carrito__menu {
+   display: none;
+  
+    
+}
+
+/*Enfoque mobil cambiar a enfoque mobil first*/
+
+.header__submenu:hover .carrito__menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%); /* Mueve el div a la izquierda por la mitad de su ancho para centrarlo */
+    z-index: 10;
+    background-color: white;
+    padding: 1rem;
+    min-height: 50rem; 
+    min-width: 30rem;
+    border: 1px solid #f0f0f0;
+  
+}  
+
+@media (min-width: 768px) { 
+    .header__submenu:hover .carrito__menu {
+       
+        right: 1rem;
+        padding: 1rem;
+        min-height: 40rem; 
+        min-width: 50rem;
+        transform: translateX(-100%); /* Mueve el div a la izquierda por la mitad de su ancho para centrarlo */
+        left: 50%; /* Posiciona el borde izquierdo del div al 50% del contenedor */
+     
+    }
+}
+
+
+.carrito__btn-vaciar {
+    margin-top: 2rem;
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: #de1de8;
+    border: 1px solid #f0f0f0 ;
+    color: black;
+}
+
+#lista-carrito img {
+    width: 100px;
+    height: 60px;
+    object-fit: cover; /* Ajusta la imagen para que se recorte y no se deforme */
+}
+
+.carrito__lista {
+    width: 100%;
+}
+
+.carrito__lista th {
+    text-align: left;
+}
+
+#lista-carrito td {
+    padding: 10px; /* Añade espacio interno alrededor del contenido */
+}
+
+@media (max-width: 768px) {
+    /* Ocultar la imagen y el título en el cuerpo (tbody) */
+    #lista-carrito td img,
+    #lista-carrito td:nth-child(1) { /* Oculta la primera columna del cuerpo */
+        display: none;
+    }
+
+    /* Ocultar los encabezados correspondientes (thead) */
+    #lista-carrito th:nth-child(1) { /* Oculta el encabezado de la imagen */
+        display: none;
+    }
+    
+    /* Ajustar el ancho de las celdas restantes para que ocupen el espacio disponible */
+    #lista-carrito td, 
+    #lista-carrito th {
+        width: auto; /* Ajusta el ancho de las celdas */
+    }
+    
+    /* Asegurar que las celdas ocupen todo el ancho disponible */
+    #lista-carrito {
+        width: 100%;
+    }
+}
+/*Hero*/
+
+
+.hero__flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+    
+
+.hero__contenedor-texto {
+    display: none;
+    
+}
+
+@media (min-width: 768px) { 
+    
+.hero__contenedor-texto {
+    display: block;
+    color: #ffffff;
+    margin-top: 5rem;
+
+}
+}
+
+
+.hero__contenedor-texto h2 {
+    margin-bottom: 5rem ;
+}
+
+
+
+.hero {
+    background-image:url(.../../../img/imagen-hero5.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25rem;
+    background-position: center center ;
+}
+/*
+@media (min-width: 550px ) { 
+    .hero {
+        height: 35rem;
+    }
+}
+    */
+
+@media (min-width: 768px) { 
+    .hero {
+        
+        height: 45rem;
+        background-position: center 60% ;
+    }
+}
+
+/*Tienda online-main*/
+.tienda__contenedor {
+    background-color: #201f1f;
+    margin-top: -3rem;
+}
+
+.tienda__titulo{
+    color: var(--primario);
+    font-weight: 700;
+    padding-top: 2rem;
+}
+.card {
+   
+    width: 30rem;
+    border: 1px solid #0f0e0e;
+    margin: auto auto 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra básica */
+    
+}
+
+@media (min-width: 768px) { 
+ .card {
+    width: 35rem;
+ }   
+}
+
+.card__info {
+    padding: 0 2rem;
+    color: white;
+}
+
+.card__info h4 {
+    margin-bottom: 0;
+}
+
+.card__info .card__precio {
+    font-weight: 700;
+}
+
+.card__info:nth-child(2) {
+    padding-bottom: 0;
+}
+.card .card__img {
+    width: 100%;
+   height: 30rem;
+   object-fit: cover;
+}
+.boton__agregar {
+    background-color: var(--primario);
+    display: block;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out ;
+    text-align: center;
+    border: none;
+    /*width: 100%; puedo ponerlo o no ya que tiene un display block si le pongo un 50% queda a la mitad*/
+}
+
+.borrar-curso {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.boton__agregar:hover {
+    background-color:  #201f1f;
+}
+
+@media (min-width: 768px) { 
+    .tienda__flex {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}

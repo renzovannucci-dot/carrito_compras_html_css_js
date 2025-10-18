@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__flex">
+            <div class="header__logo">
+                <h1>Tienda <span>Deportes</span></h1>
+            </div>
+
+            <div class="header__submenu">
+                <img src="img/cart.png" id="img-carrito">
+                    <div id="carrito" class="carrito__menu">
+                     
+                        <table id="lista-carrito" class="carrito__lista">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+
+                        <a href="#" id="vaciar-carrito" class="carrito__btn-vaciar">Vaciar Carrito</a>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero__flex contenedor">
+            <div class="hero__contenedor-texto">
+                <h2 class="hero__titulo">¿Quiéres equipar tu gimnasio?</h2>
+                <h2>¡Encuentra todo aquí!</h2>
+            </div>
+           
+        </div>
+    </div>
+
+    <main id="lista-cursos" class="tienda__contenedor ">
+        <h1 class="tienda__titulo text-center">TIENDA ONLINE</h1>
+        <div id="tienda__online" class="tienda__flex contenedor">
+            <div class="card">
+                <img class="card__img" src="img/imagen-carrito1.avif" alt="">
+                <div class="card__info">
+                    <h4>Kit deportivo</h4>
+                    <p>Proyect</p>
+                    <p class="card__precio">$9.000</p>
+                    
+                </div>
+                <a class="boton__agregar" data-id="1" href="#">Agregar al carrito</a>
+                
+               
+            </div>
+            <!--.card__info-->
+
+            <div class="card">
+                <img class="card__img" src="img/imagen-carrito2.avif" alt="">
+                <div class="card__info">
+                    <h4>Mancuernas de goma</h4>
+                    <p>Proyect</p>
+                    <p class="card__precio">$15.000</p>
+                    
+                </div>
+                <a class="boton__agregar" data-id="2" href="#">Agregar al carrito</a>
+               
+            </div>
+            <!--.card__info-->
+
+            <div class="card">
+                <img class="card__img" src="img/imagen-carrito3.avif" alt="">
+                <div class="card__info">
+                    <h4>Kit Ketbells</h4>
+                    <p>Proyect</p>
+                    <p class="card__precio">$12.000</p>
+                </div>
+                <a class="boton__agregar" data-id="3" href="#">Agregar al carrito</a>
+            </div>
+            <!--.card__info-->
+
+            <div class="card">
+                <img class="card__img" src="img/imagen-carrito4.avif" alt="">
+                <div class="card__info">
+                    <h4>Alfombras para Yoga</h4>
+                    <p>Proyect</p>
+                    <p class="card__precio">$5.000</p>
+                </div>
+                <a class="boton__agregar" data-id="4" href="#">Agregar al carrito</a>
+            </div>
+            <!--.card__info-->
+
+            <div class="card">
+                <img class="card__img" src="img/imagen-carrito5.avif" alt="">
+                <div class="card__info">
+                    <h4>Barra olimpica 20kg</h4>
+                    <p>Proyect</p>
+                    <p class="card__precio">$20.000</p>
+                </div>
+                <a class="boton__agregar" data-id="5" href="#">Agregar al carrito</a>
+            </div>
+            <!--.card__info-->
+    
+            <div class="card">
+                <img class="card__img" src="img/imagen-carrito6.avif" alt="">
+                <div class="card__info">
+                    <h4>Discos de goma</h4>
+                    <p>Proyect</p>
+                    <p class="card__precio">$15.000</p>
+                </div>
+                <a class="boton__agregar" data-id="6" href="#">Agregar al carrito</a>
+            </div>
+            <!--.card__info-->
+    
+            <div class="card">
+                <img class="card__img" src="img/imagen-carrito7.avif" alt="">
+                <div class="card__info">
+                    <h4>Pelotas medicinales</h4>
+                    <p>Proyect</p>
+                    <p class="card__precio">$7.000</p>
+                </div>
+                <a class="boton__agregar" data-id="7" href="#">Agregar al carrito</a>
+            </div>
+            <!--.card__info-->
+    
+            <div class="card">
+                <img class="card__img" src="img/imagen-carrito8.avif" alt="">
+                <div class="card__info">
+                    <h4>TRX</h4>
+                    <p>Proyect</p>
+                    <p class="card__precio">$4.000</p>
+                </div>
+                <a class="boton__agregar" data-id="8" href="#">Agregar al carrito</a>
+            </div>
+            <!--.card__info-->
+    
+            <div class="card">
+                <img class="card__img" src="img/imagen-carrito9.avif" alt="">
+                <div class="card__info">
+                    <h4>Bandas elásticas</h4>
+                    <p>Proyect</p>
+                    <p class="card__precio">$6.000</p>
+                </div>
+                <a class="boton__agregar" data-id="9" href="#">Agregar al carrito</a>
+            </div>
+            <!--.card__info-->
+    
+        </div>
+
+       
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
